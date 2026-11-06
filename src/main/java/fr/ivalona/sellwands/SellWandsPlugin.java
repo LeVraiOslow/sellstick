@@ -143,7 +143,7 @@ public final class SellWandsPlugin extends JavaPlugin implements Listener, TabEx
         }
     }
 
-    /** Charge tous les sell-price du /shop (categories/*/*.yml, section shop-items). */
+    // Charge tous les sell-price du /shop (dossiers de categories, section shop-items).
     private void loadPrices() {
         prices.clear();
         hasNexoPrices = false;
