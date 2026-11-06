@@ -1,0 +1,376 @@
+# ============================================================
+#  Items de la catégorie "Minerais"
+#  Tous les fichiers .yml de ce dossier (hors category.yml) sont lus : vous pouvez
+#  découper les items en plusieurs fichiers (ex : items.yml, rares.yml...).
+#
+#  Placement : par défaut les items se placent automatiquement dans les "content-slots"
+#  de category.yml et passent sur la page suivante quand il n'y a plus de place.
+#  Pour forcer un emplacement : slot: 10 (ou slots: [10, 11]) et, optionnel, page: 2.
+#
+#  Champs d'un item :
+#    material          : item réel acheté/vendu (STONE ou nexo:mon_item)
+#    display-material  : (optionnel) autre item pour l'affichage
+#    name / lore       : (optionnels) nom et description (codes couleur partout)
+#                        lore par défaut = default-item-lore de config.yml
+#    buy-price         : prix d'achat  (absent ou négatif = non achetable)
+#    sell-price        : prix de vente (absent ou négatif = non vendable)
+#    buyable / sellable: false pour forcer la désactivation
+#    commands          : commandes exécutées à l'achat (console par défaut, "[player] ..." possible)
+#                        placeholders : %player% %amount%
+#    give-item         : donner l'item physique ? (défaut : false si "commands" est défini)
+#    commands-per-unit : true = exécuter les commandes une fois par unité achetée
+#    custom-model-data, glow, hide-flags, amount
+#  Clic gauche = acheter, clic droit = vendre.
+# ============================================================
+shop-items:
+  lapis_lazuli:
+    material: LAPIS_LAZULI
+    name: "&6&lʟᴀᴘɪs ʟᴀᴢᴜʟɪ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 40
+    sell-price: 0.4
+  lapis_block:
+    material: LAPIS_BLOCK
+    name: "&6&lʟᴀᴘɪs ʙʟᴏᴄᴋ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 400
+    sell-price: 4
+  redstone:
+    material: REDSTONE
+    name: "&6&lʀᴇᴅsᴛᴏɴᴇ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 50
+    sell-price: 0.5
+  redstone_block:
+    material: REDSTONE_BLOCK
+    name: "&6&lʀᴇᴅsᴛᴏɴᴇ ʙʟᴏᴄᴋ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 500
+    sell-price: 5
+  coal:
+    material: COAL
+    name: "&6&lᴄᴏᴀʟ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 225
+    sell-price: 2.25
+  charcoal:
+    material: CHARCOAL
+    name: "&6&lᴄʜᴀʀᴄᴏᴀʟ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 225
+    sell-price: 2.25
+  coal_block:
+    material: COAL_BLOCK
+    name: "&6&lᴄᴏᴀʟ ʙʟᴏᴄᴋ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 2250
+    sell-price: 22.5
+  raw_iron:
+    material: RAW_IRON
+    name: "&6&lʀᴀᴡ ɪʀᴏɴ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 225
+    sell-price: 2.25
+  raw_iron_block:
+    material: RAW_IRON_BLOCK
+    name: "&6&lʀᴀᴡ ɪʀᴏɴ ʙʟᴏᴄᴋ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 2250
+    sell-price: 22.5
+  iron_ingot:
+    material: IRON_INGOT
+    name: "&6&lɪʀᴏɴ ɪɴɢᴏᴛ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 250
+    sell-price: 2.5
+  iron_block:
+    material: IRON_BLOCK
+    name: "&6&lɪʀᴏɴ ʙʟᴏᴄᴋ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 2500
+    sell-price: 25
+  raw_copper:
+    material: RAW_COPPER
+    name: "&6&lʀᴀᴡ ᴄᴏᴘᴘᴇʀ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 65
+    sell-price: 0.65
+  raw_copper_block:
+    material: RAW_COPPER_BLOCK
+    name: "&6&lʀᴀᴡ ᴄᴏᴘᴘᴇʀ ʙʟᴏᴄᴋ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 650
+    sell-price: 6.5
+  copper_ingot:
+    material: COPPER_INGOT
+    name: "&6&lᴄᴏᴘᴘᴇʀ ɪɴɢᴏᴛ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 75
+    sell-price: 0.75
+  copper_block:
+    material: COPPER_BLOCK
+    name: "&6&lᴄᴏᴘᴘᴇʀ ʙʟᴏᴄᴋ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 750
+    sell-price: 7.5
+  raw_gold:
+    material: RAW_GOLD
+    name: "&6&lʀᴀᴡ ɢᴏʟᴅ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 225
+    sell-price: 2.25
+  raw_gold_block:
+    material: RAW_GOLD_BLOCK
+    name: "&6&lʀᴀᴡ ɢᴏʟᴅ ʙʟᴏᴄᴋ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 2250
+    sell-price: 22.5
+  gold_ingot:
+    material: GOLD_INGOT
+    name: "&6&lɢᴏʟᴅ ɪɴɢᴏᴛ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 275
+    sell-price: 2.75
+  gold_block:
+    material: GOLD_BLOCK
+    name: "&6&lɢᴏʟᴅ ʙʟᴏᴄᴋ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 2750
+    sell-price: 27.5
+  diamond:
+    material: DIAMOND
+    name: "&6&lᴅɪᴀᴍᴏɴᴅ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 300
+    sell-price: 3
+  diamond_block:
+    material: DIAMOND_BLOCK
+    name: "&6&lᴅɪᴀᴍᴏɴᴅ ʙʟᴏᴄᴋ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 3000
+    sell-price: 30
+  emerald:
+    material: EMERALD
+    name: "&6&lᴇᴍᴇʀᴀʟᴅ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 500
+    sell-price: 5
+  emerald_block:
+    material: EMERALD_BLOCK
+    name: "&6&lᴇᴍᴇʀᴀʟᴅ ʙʟᴏᴄᴋ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 5000
+    sell-price: 50
+  ancient_debris:
+    material: ANCIENT_DEBRIS
+    name: "&6&lᴀɴᴄɪᴇɴᴛ ᴅᴇʙʀɪs"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 750
+    sell-price: 7.5
+  netherite_scrap:
+    material: NETHERITE_SCRAP
+    name: "&6&lɴᴇᴛʜᴇʀɪᴛᴇ sᴄʀᴀᴘ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 1000
+    sell-price: 10
+  netherite_ingot:
+    material: NETHERITE_INGOT
+    name: "&6&lɴᴇᴛʜᴇʀɪᴛᴇ ɪɴɢᴏᴛ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 5000
+    sell-price: 50
+  netherite_block:
+    material: NETHERITE_BLOCK
+    name: "&6&lɴᴇᴛʜᴇʀɪᴛᴇ ʙʟᴏᴄᴋ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 50000
+    sell-price: 500

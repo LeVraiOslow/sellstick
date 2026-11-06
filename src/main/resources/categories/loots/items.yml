@@ -1,0 +1,387 @@
+# ============================================================
+#  Items de la catégorie "Loots"
+#  Tous les fichiers .yml de ce dossier (hors category.yml) sont lus : vous pouvez
+#  découper les items en plusieurs fichiers (ex : items.yml, rares.yml...).
+#
+#  Placement : par défaut les items se placent automatiquement dans les "content-slots"
+#  de category.yml et passent sur la page suivante quand il n'y a plus de place.
+#  Pour forcer un emplacement : slot: 10 (ou slots: [10, 11]) et, optionnel, page: 2.
+#
+#  Champs d'un item :
+#    material          : item réel acheté/vendu (STONE ou nexo:mon_item)
+#    display-material  : (optionnel) autre item pour l'affichage
+#    name / lore       : (optionnels) nom et description (codes couleur partout)
+#                        lore par défaut = default-item-lore de config.yml
+#    buy-price         : prix d'achat  (absent ou négatif = non achetable)
+#    sell-price        : prix de vente (absent ou négatif = non vendable)
+#    buyable / sellable: false pour forcer la désactivation
+#    commands          : commandes exécutées à l'achat (console par défaut, "[player] ..." possible)
+#                        placeholders : %player% %amount%
+#    give-item         : donner l'item physique ? (défaut : false si "commands" est défini)
+#    commands-per-unit : true = exécuter les commandes une fois par unité achetée
+#    custom-model-data, glow, hide-flags, amount
+#  Clic gauche = acheter, clic droit = vendre.
+# ============================================================
+# Loots : items physiques (clic gauche = acheter, clic droit = vendre).
+# ============================================================
+shop-items:
+  rotten_flesh:
+    material: ROTTEN_FLESH
+    name: "&6&lʀᴏᴛᴛᴇɴ ғʟᴇsʜ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 100
+    sell-price: 0.25
+  arrow:
+    material: ARROW
+    name: "&6&lᴀʀʀᴏᴡ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 100
+    sell-price: 0.25
+  bone:
+    material: BONE
+    name: "&6&lʙᴏɴᴇ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 100
+    sell-price: 0.25
+  bone_meal:
+    material: BONE_MEAL
+    name: "&6&lʙᴏɴᴇ ᴍᴇᴀʟ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 100
+    sell-price: 0.07
+  bone_block:
+    material: BONE_BLOCK
+    name: "&6&lʙᴏɴᴇ ʙʟᴏᴄᴋ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 270
+    sell-price: 3
+  string:
+    material: STRING
+    name: "&6&lsᴛʀɪɴɢ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 80
+    sell-price: 0.25
+  spider_eye:
+    material: SPIDER_EYE
+    name: "&6&lsᴘɪᴅᴇʀ ᴇʏᴇ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 250
+    sell-price: 0.7
+  gunpowder:
+    material: GUNPOWDER
+    name: "&6&lɢᴜɴᴘᴏᴡᴅᴇʀ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 250
+    sell-price: 0.7
+  blaze_rod:
+    material: BLAZE_ROD
+    name: "&6&lʙʟᴀᴢᴇ ʀᴏᴅ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 800
+    sell-price: 5
+  blaze_powder:
+    material: BLAZE_POWDER
+    name: "&6&lʙʟᴀᴢᴇ ᴘᴏᴡᴅᴇʀ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 500
+    sell-price: 3
+  ghast_tear:
+    material: GHAST_TEAR
+    name: "&6&lɢʜᴀsᴛ ᴛᴇᴀʀ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 1000
+    sell-price: 100
+  ender_pearl:
+    material: ENDER_PEARL
+    name: "&6&lᴇɴᴅᴇʀ ᴘᴇᴀʀʟ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 5000
+    sell-price: 5
+  ender_eye:
+    material: ENDER_EYE
+    name: "&6&lᴇɴᴅᴇʀ ᴇʏᴇ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 250
+    sell-price: 6
+  slime_ball:
+    material: SLIME_BALL
+    name: "&6&lsʟɪᴍᴇ ʙᴀʟʟ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 1000
+    sell-price: 0.9
+  magma_cream:
+    material: MAGMA_CREAM
+    name: "&6&lᴍᴀɢᴍᴀ ᴄʀᴇᴀᴍ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 2500
+    sell-price: 1.3
+  snowball:
+    material: SNOWBALL
+    name: "&6&lsɴᴏᴡʙᴀʟʟ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 10
+    sell-price: 0.1
+  rabbit_foot:
+    material: RABBIT_FOOT
+    name: "&6&lʀᴀʙʙɪᴛ ғᴏᴏᴛ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 250
+    sell-price: 5
+  rabbit_hide:
+    material: RABBIT_HIDE
+    name: "&6&lʀᴀʙʙɪᴛ ʜɪᴅᴇ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 25
+    sell-price: 0.7
+  egg:
+    material: EGG
+    name: "&6&lᴇɢɢ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 500
+    sell-price: 0.6
+  feather:
+    material: FEATHER
+    name: "&6&lғᴇᴀᴛʜᴇʀ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 50
+    sell-price: 0.7
+  leather:
+    material: LEATHER
+    name: "&6&lʟᴇᴀᴛʜᴇʀ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 150
+    sell-price: 3
+  ink_sac:
+    material: INK_SAC
+    name: "&6&lɪɴᴋ sᴀᴄ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 150
+    sell-price: 1
+  glow_ink_sac:
+    material: GLOW_INK_SAC
+    name: "&6&lɢʟᴏᴡ ɪɴᴋ sᴀᴄ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 500
+    sell-price: 2
+  prismarine_shard:
+    material: PRISMARINE_SHARD
+    name: "&6&lᴘʀɪsᴍᴀʀɪɴᴇ sʜᴀʀᴅ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 25
+    sell-price: 0.8
+  prismarine_crystals:
+    material: PRISMARINE_CRYSTALS
+    name: "&6&lᴘʀɪsᴍᴀʀɪɴᴇ ᴄʀʏsᴛᴀʟs"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+    buy-price: 25
+    sell-price: 0.8
+  honey_bottle:
+    material: HONEY_BOTTLE
+    name: "&6&lʜᴏɴᴇʏ ʙᴏᴛᴛʟᴇ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+    buy-price: 50
+    sell-price: 1.5
+  honeycomb:
+    material: HONEYCOMB
+    name: "&6&lʜᴏɴᴇʏᴄᴏᴍʙ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+    buy-price: 50
+    sell-price: 1.5
+  glowstone_dust:
+    material: GLOWSTONE_DUST
+    name: "&6&lɢʟᴏᴡsᴛᴏɴᴇ ᴅᴜsᴛ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+    buy-price: 150
+    sell-price: 3

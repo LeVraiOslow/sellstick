@@ -1,0 +1,111 @@
+# ════════════════════════════════════════════════════════════
+#  SellWands - batons de vente
+#  Clic droit avec un baton sur un coffre / tonneau / shulker : tout le contenu
+#  vendable est vendu au prix de vente (sell-price) du /shop, multiplié par la rareté.
+#  Accroupi (shift) : comportement normal (le baton ne vend pas).
+#
+#  COULEURS : codes & (&a &l ...) et &#RRGGBB.
+# ════════════════════════════════════════════════════════════
+
+shop:
+  # Dossier "categories" du /shop (celui qui contient blocs/, cultures/, loots/...).
+  # Chemin relatif au dossier du serveur, ex : "plugins/MonShop/categories"
+  # Vide = utilise la copie de ta sauvegarde : plugins/SellWands/categories
+  # Seuls les items avec un sell-price (et sellable != false) sont vendus.
+  # Après modification des prix : /sellwand reload
+  categories-folder: ""
+
+settings:
+  # Conteneurs sur lesquels le baton fonctionne (SHULKER_BOX = toutes les couleurs)
+  containers: [CHEST, TRAPPED_CHEST, BARREL, SHULKER_BOX]
+  # true = ne vend pas les items renommés / enchantés / avec meta (seulement les items "propres")
+  sell-only-plain-items: true
+  # Délai minimum entre 2 ventes (ms)
+  cooldown-ms: 500
+  # Format de l'argent. Placeholder : <amount>
+  money-format: "<amount>$"
+  # Son joué à la vente (clé vanilla, vide = aucun)
+  sound-sell: "entity.experience_orb.pickup"
+
+messages:
+  prefix: "&#E87833&lɪᴠᴀʟᴏɴᴀ &7» "
+  no-permission: "&cTu n'as pas la permission."
+  usage: "&e/sellwand give <joueur> <rareté> [quantité] &7| &elist &7| &ereload"
+  usage-give: "&cUsage : /sellwand give <joueur> <rareté> [quantité]"
+  reloaded: "&aConfiguration rechargée &7(&f<prices> &7prix de vente chargés)."
+  list: "&eBatons disponibles : &f<wands>"
+  unknown-subcommand: "&cSous-commande inconnue."
+  unknown-player: "&cJoueur introuvable."
+  unknown-wand: "&cBâton inconnu. Utilise /sellwand list."
+  invalid-amount: "&cQuantité invalide."
+  given: "&a<wand> &ax<amount> donné à <player>."
+  received: "&aTu as reçu : <wand> &ax<amount>"
+  nothing-to-sell: "&cAucun item vendable dans ce conteneur."
+  sold: "&aVente effectuée : &f<count> items &7→ &a<amount> &7(&fx<multiplier> &7du prix du /shop&7)"
+  no-economy: "&cAucune économie (Vault) disponible."
+
+# ───────────── Batons ─────────────
+# multiplier : multiplicateur appliqué au sell-price du /shop
+# material   : item de base si nexo-id est vide ou introuvable
+# nexo-id    : id Nexo de la texture (optionnel, si introuvable -> material)
+# Placeholders du lore : <multiplier>
+wands:
+  commun:
+    multiplier: 1.0
+    material: BLAZE_ROD
+    nexo-id: baton_vente_commun
+    glow: false
+    name: "&a&lʙᴀᴛᴏɴ ᴅᴇ ᴠᴇɴᴛᴇ ᴄᴏᴍᴍᴜɴ"
+    lore:
+      - ""
+      - "&7Clic droit sur un coffre pour vendre"
+      - "&7tout son contenu."
+      - ""
+      - "&#E87833• &#FFD95Cᴠᴇɴᴛᴇ: &fx<multiplier> &7du prix du /shop"
+      - ""
+      - "&#E87833ʀᴀʀᴇᴛᴇ: &a&lCOMMUN"
+
+  rare:
+    multiplier: 1.2
+    material: BLAZE_ROD
+    nexo-id: baton_vente_rare
+    glow: false
+    name: "&b&lʙᴀᴛᴏɴ ᴅᴇ ᴠᴇɴᴛᴇ ʀᴀʀᴇ"
+    lore:
+      - ""
+      - "&7Clic droit sur un coffre pour vendre"
+      - "&7tout son contenu."
+      - ""
+      - "&#E87833• &#FFD95Cᴠᴇɴᴛᴇ: &fx<multiplier> &7du prix du /shop"
+      - ""
+      - "&#E87833ʀᴀʀᴇᴛᴇ: &b&lRARE"
+
+  epic:
+    multiplier: 1.5
+    material: BLAZE_ROD
+    nexo-id: baton_vente_epic
+    glow: true
+    name: "&d&lʙᴀᴛᴏɴ ᴅᴇ ᴠᴇɴᴛᴇ ᴇᴘɪᴄ"
+    lore:
+      - ""
+      - "&7Clic droit sur un coffre pour vendre"
+      - "&7tout son contenu."
+      - ""
+      - "&#E87833• &#FFD95Cᴠᴇɴᴛᴇ: &fx<multiplier> &7du prix du /shop"
+      - ""
+      - "&#E87833ʀᴀʀᴇᴛᴇ: &d&lEPIC"
+
+  mythique:
+    multiplier: 2.0
+    material: BLAZE_ROD
+    nexo-id: baton_vente_mythique
+    glow: true
+    name: "&c&lʙᴀᴛᴏɴ ᴅᴇ ᴠᴇɴᴛᴇ ᴍʏᴛʜɪqᴜᴇ"
+    lore:
+      - ""
+      - "&7Clic droit sur un coffre pour vendre"
+      - "&7tout son contenu."
+      - ""
+      - "&#E87833• &#FFD95Cᴠᴇɴᴛᴇ: &fx<multiplier> &7du prix du /shop"
+      - ""
+      - "&#E87833ʀᴀʀᴇᴛᴇ: &c&lMYTHIQUE"

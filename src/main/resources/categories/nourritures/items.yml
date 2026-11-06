@@ -1,0 +1,358 @@
+# ============================================================
+#  Items de la catégorie "Nourritures"
+#  Tous les fichiers .yml de ce dossier (hors category.yml) sont lus : vous pouvez
+#  découper les items en plusieurs fichiers (ex : items.yml, rares.yml...).
+#
+#  Placement : par défaut les items se placent automatiquement dans les "content-slots"
+#  de category.yml et passent sur la page suivante quand il n'y a plus de place.
+#  Pour forcer un emplacement : slot: 10 (ou slots: [10, 11]) et, optionnel, page: 2.
+#
+#  Champs d'un item :
+#    material          : item réel acheté/vendu (STONE ou nexo:mon_item)
+#    display-material  : (optionnel) autre item pour l'affichage
+#    name / lore       : (optionnels) nom et description (codes couleur partout)
+#                        lore par défaut = default-item-lore de config.yml
+#    buy-price         : prix d'achat  (absent ou négatif = non achetable)
+#    sell-price        : prix de vente (absent ou négatif = non vendable)
+#    buyable / sellable: false pour forcer la désactivation
+#    commands          : commandes exécutées à l'achat (console par défaut, "[player] ..." possible)
+#                        placeholders : %player% %amount%
+#    give-item         : donner l'item physique ? (défaut : false si "commands" est défini)
+#    commands-per-unit : true = exécuter les commandes une fois par unité achetée
+#    custom-model-data, glow, hide-flags, amount
+#  Clic gauche = acheter, clic droit = vendre.
+# ============================================================
+# Démo pagination : 22 items pour 18 emplacements (menu de 3 lignes) = 2 pages.
+# L'item "enchanted_golden_apple" est vendable uniquement (buyable: false).
+# ============================================================
+shop-items:
+  bread:
+    material: BREAD
+    name: "&6&lʙʀᴇᴀᴅ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 50
+    sell-price: 0.7
+  apple:
+    material: APPLE
+    name: "&6&lᴀᴘᴘʟᴇ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 50
+    sell-price: 0.6
+  baked_potato:
+    material: BAKED_POTATO
+    name: "&6&lʙᴀᴄᴋᴇᴅ ᴘᴏᴛᴀᴛᴏ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 50
+    sell-price: 2
+  rabbit:
+    material: RABBIT
+    name: "&6&lʀᴀʙʙɪᴛ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+    buy-price: 5
+  cooked_rabbit:
+    material: COOKED_RABBIT
+    name: "&6&lᴄᴏᴏᴋᴇᴅ ʀᴀʙʙɪᴛ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+    buy-price: 10
+  chicken:
+    material: CHICKEN
+    name: "&6&lᴄʜɪᴄᴋᴇɴ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+    buy-price: 5
+  cooked_chicken:
+    material: COOKED_CHICKEN
+    name: "&6&lᴄᴏᴏᴋᴇᴅ ᴄʜɪᴄᴋᴇɴ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+    buy-price: 10
+  beef:
+    material: BEEF
+    name: "&6&lʙᴇᴇғ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+    buy-price: 5
+  cooked_beef:
+    material: COOKED_BEEF
+    name: "&6&lᴄᴏᴏᴋᴇᴅ ʙᴇᴇғ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+    buy-price: 10
+  porkchop:
+    material: PORKCHOP
+    name: "&6&lᴘᴏʀᴋᴄʜᴏᴘ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+    buy-price: 5
+  cooked_porkchop:
+    material: COOKED_PORKCHOP
+    name: "&6&lᴄᴏᴏᴋᴇᴅ ᴘᴏʀᴋᴄʜᴏᴘ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+    buy-price: 10
+  pumpkin_pie:
+    material: PUMPKIN_PIE
+    name: "&6&lᴘᴜᴍᴘᴋɪɴ ᴘɪᴇ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 15
+    sell-price: 3
+  cake:
+    material: CAKE
+    name: "&6&lᴄᴀᴋᴇ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 40
+    sell-price: 5
+  mushroom_stew:
+    material: MUSHROOM_STEW
+    name: "&6&lᴍᴜsʜʀᴏᴏᴍ sᴛᴇᴡ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 15
+    sell-price: 1.5
+  rabbit_stew:
+    material: RABBIT_STEW
+    name: "&6&lʀᴀʙʙɪᴛ sᴛᴇᴡ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 15
+    sell-price: 1.5
+  beetroot_soup:
+    material: BEETROOT_SOUP
+    name: "&6&lʙᴇᴇᴛʀᴏᴏᴛ sᴛᴇᴡ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 15
+    sell-price: 1.5
+  dried_kelp:
+    material: DRIED_KELP
+    name: "&6&lᴅʀɪᴇᴅ ᴋᴇʟᴘ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 20
+    sell-price: 0.4
+  golden_apple:
+    material: GOLDEN_APPLE
+    name: "&6&lɢᴏʟᴅᴇɴ ᴀᴘᴘʟᴇ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 2000
+    sell-price: 25
+  golden_carrot:
+    material: GOLDEN_CARROT
+    name: "&6&lɢᴏʟᴅᴇɴ ᴄᴀʀʀᴏᴛ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 150
+    sell-price: 2.5
+  mutton:
+    material: MUTTON
+    name: "&6&lᴍᴜᴛᴛᴏɴ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+    buy-price: 5
+  cooked_mutton:
+    material: COOKED_MUTTON
+    name: "&6&lᴄᴏᴏᴋᴇᴅ ᴍᴜᴛᴛᴏɴ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+    buy-price: 10
+  cod:
+    material: COD
+    name: "&6&lᴄᴏᴅ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+    buy-price: 5
+  cooked_cod:
+    material: COOKED_COD
+    name: "&6&lᴄᴏᴏᴋᴇᴅ ᴄᴏᴅ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+    buy-price: 10
+  salmon:
+    material: SALMON
+    name: "&6&lsᴀʟᴍᴏɴ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+    buy-price: 5
+  cooked_salmon:
+    material: COOKED_SALMON
+    name: "&6&lᴄᴏᴏᴋᴇᴅ sᴀʟᴍᴏɴ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+    buy-price: 10
+  pufferfish:
+    material: PUFFERFISH
+    name: "&6&lᴘᴜғғᴇʀғɪsʜ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+    buy-price: 200
+  tropical_fish:
+    material: TROPICAL_FISH
+    name: "&6&lᴛʀᴏᴘɪᴄᴀʟ ғɪsʜ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+    buy-price: 500
+  chorus_fruit:
+    material: CHORUS_FRUIT
+    name: "&6&lᴄʜᴏʀᴜs ғʀᴜɪᴛ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+    buy-price: 100

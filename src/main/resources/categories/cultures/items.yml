@@ -1,0 +1,543 @@
+# ============================================================
+#  Items de la catégorie "Cultures"
+#  Tous les fichiers .yml de ce dossier (hors category.yml) sont lus : vous pouvez
+#  découper les items en plusieurs fichiers (ex : items.yml, rares.yml...).
+#
+#  Placement : par défaut les items se placent automatiquement dans les "content-slots"
+#  de category.yml et passent sur la page suivante quand il n'y a plus de place.
+#  Pour forcer un emplacement : slot: 10 (ou slots: [10, 11]) et, optionnel, page: 2.
+#
+#  Champs d'un item :
+#    material          : item réel acheté/vendu (STONE ou nexo:mon_item)
+#    display-material  : (optionnel) autre item pour l'affichage
+#    name / lore       : (optionnels) nom et description (codes couleur partout)
+#                        lore par défaut = default-item-lore de config.yml
+#    buy-price         : prix d'achat  (absent ou négatif = non achetable)
+#    sell-price        : prix de vente (absent ou négatif = non vendable)
+#    buyable / sellable: false pour forcer la désactivation
+#    commands          : commandes exécutées à l'achat (console par défaut, "[player] ..." possible)
+#                        placeholders : %player% %amount%
+#    give-item         : donner l'item physique ? (défaut : false si "commands" est défini)
+#    commands-per-unit : true = exécuter les commandes une fois par unité achetée
+#    custom-model-data, glow, hide-flags, amount
+#  Clic gauche = acheter, clic droit = vendre.
+# ============================================================
+shop-items:
+  wheat_seeds:
+    material: WHEAT_SEEDS
+    name: "&6&lᴡʜᴇᴀᴛ sᴇᴇᴅs"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 500
+    sell-price: 0.04
+  wheat:
+    material: WHEAT
+    name: "&6&lᴡʜᴇᴀᴛ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 25
+    sell-price: 0.2
+  hay_block:
+    material: HAY_BLOCK
+    name: "&6&lʜᴀʏ ʙʟᴏᴄᴋ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 225
+    sell-price: 1.8
+  beetroot_seeds:
+    material: BEETROOT_SEEDS
+    name: "&6&lʙᴇᴇᴛʀᴏᴏᴛ sᴇᴇᴅs"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 500
+    sell-price: 0.4
+  beetroot:
+    material: BEETROOT
+    name: "&6&lʙᴇᴇᴛʀᴏᴏᴛ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 25
+    sell-price: 2
+  carrot:
+    material: CARROT
+    name: "&6&lᴄᴀʀʀᴏᴛ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 500
+    sell-price: 0.8
+  potato:
+    material: POTATO
+    name: "&6&lᴘᴏᴛᴀᴛᴏ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 500
+    sell-price: 0.8
+  poisonous_potato:
+    material: POISONOUS_POTATO
+    name: "&6&lᴘᴏɪsᴏɴᴏᴜs ᴘᴏᴛᴀᴛᴏ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    sell-price: 5
+  bamboo:
+    material: BAMBOO
+    name: "&6&lʙᴀᴍʙᴏᴏ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 500
+    sell-price: 0.9
+  sugar_cane:
+    material: SUGAR_CANE
+    name: "&6&lsᴜɢᴀʀ ᴄᴀɴᴇ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 500
+    sell-price: 0.8
+  sugar:
+    material: SUGAR
+    name: "&6&lsᴜɢᴀʀ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 30
+    sell-price: 0.5
+  cactus:
+    material: CACTUS
+    name: "&6&lᴄᴀᴄᴛᴜs"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 500
+    sell-price: 0.8
+  kelp:
+    material: KELP
+    name: "&6&lᴋᴇʟᴘ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 500
+    sell-price: 0.3
+  dried_kelp_block:
+    material: DRIED_KELP_BLOCK
+    name: "&6&lᴅʀɪᴇᴅ ᴋᴇʟᴘ ʙʟᴏᴄᴋ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 180
+    sell-price: 4.2
+  melon_seeds:
+    material: MELON_SEEDS
+    name: "&6&lᴍᴇʟᴏɴ sᴇᴇᴅs"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 500
+    sell-price: 0.2
+  melon_slice:
+    material: MELON_SLICE
+    name: "&6&lᴍᴇʟᴏɴ sʟɪᴄᴇ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 500
+    sell-price: 0.8
+  melon:
+    material: MELON
+    name: "&6&lᴍᴇʟᴏɴ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 2000
+    sell-price: 7.5
+  pumpkin_seeds:
+    material: PUMPKIN_SEEDS
+    name: "&6&lᴘᴜᴍᴘᴋɪɴ sᴇᴇᴅs"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 500
+    sell-price: 0.2
+  pumpkin:
+    material: PUMPKIN
+    name: "&6&lᴘᴜᴍᴘᴋɪɴ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 2000
+    sell-price: 7
+  cocoa_beans:
+    material: COCOA_BEANS
+    name: "&6&lᴄᴏᴄᴏᴀ ʙᴇᴀɴs"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 500
+    sell-price: 1.2
+  sweet_berries:
+    material: SWEET_BERRIES
+    name: "&6&lsᴡᴇᴇᴛ ʙᴇʀʀɪᴇs"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 500
+    sell-price: 0.45
+  glow_berries:
+    material: GLOW_BERRIES
+    name: "&6&lɢʟᴏᴡ ʙᴇʀʀɪᴇs"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 500
+    sell-price: 0.45
+  warped_fungus:
+    material: WARPED_FUNGUS
+    name: "&6&lᴡᴀʀᴘᴇᴅ ғᴜɴɢᴜs"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 500
+    sell-price: 4
+  crimson_fungus:
+    material: CRIMSON_FUNGUS
+    name: "&6&lᴄʀɪᴍsᴏɴ ғᴜɴɢᴜs"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 500
+    sell-price: 4
+  red_mushroom:
+    material: RED_MUSHROOM
+    name: "&6&lʀᴇᴅ ᴍᴜsʜʀᴏᴏᴍ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 500
+    sell-price: 4
+  brown_mushroom:
+    material: BROWN_MUSHROOM
+    name: "&6&lʙʀᴏᴡɴ ᴍᴜsʜʀᴏᴏᴍ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 500
+    sell-price: 4
+  vine:
+    material: VINE
+    name: "&6&lᴠɪɴᴇ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 500
+    sell-price: 1.2
+  sea_pickle:
+    material: SEA_PICKLE
+    name: "&6&lsᴇᴀ ᴘɪᴄᴋʟᴇ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 500
+    sell-price: 0.6
+  nether_wart:
+    material: NETHER_WART
+    name: "&6&lɴᴇᴛʜᴇʀ ᴡᴀʀᴛ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 500
+    sell-price: 0.8
+  oak_sapling:
+    material: OAK_SAPLING
+    name: "&6&lᴏᴀᴋ sᴀᴘʟɪɴɢ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 500
+    sell-price: 1.5
+  spruce_sapling:
+    material: SPRUCE_SAPLING
+    name: "&6&lsᴘʀᴜᴄᴇ sᴀᴘʟɪɴɢ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 500
+    sell-price: 1.5
+  birch_sapling:
+    material: BIRCH_SAPLING
+    name: "&6&lʙɪʀᴄʜ sᴀᴘʟɪɴɢ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 500
+    sell-price: 1.5
+  jungle_sapling:
+    material: JUNGLE_SAPLING
+    name: "&6&lᴊᴜɴɢʟᴇ sᴀᴘʟɪɴɢ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 500
+    sell-price: 1.5
+  acacia_sapling:
+    material: ACACIA_SAPLING
+    name: "&6&lᴀᴄᴀᴄɪᴀ sᴀᴘʟɪɴɢ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 500
+    sell-price: 1.5
+  dark_oak_sapling:
+    material: DARK_OAK_SAPLING
+    name: "&6&lᴅᴀʀᴋ ᴏᴀᴋ sᴀᴘʟɪɴɢ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 500
+    sell-price: 1.5
+  mangrove_propagule:
+    material: MANGROVE_PROPAGULE
+    name: "&6&lᴍᴀɴɢʀᴏᴠᴇ ᴘʀᴏᴘᴀɢᴜʟᴇ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 500
+    sell-price: 1.5
+  cherry_sapling:
+    material: CHERRY_SAPLING
+    name: "&6&lᴄʜᴇʀʀʏ sᴀᴘʟɪɴɢ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 500
+    sell-price: 1.5
+  pale_oak_sapling:
+    material: PALE_OAK_SAPLING
+    name: "&6&lᴘᴀʟᴇ ᴏᴀᴋ sᴀᴘʟɪɴɢ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 500
+    sell-price: 1.5
+  azalea:
+    material: AZALEA
+    name: "&6&lᴀᴢᴀʟᴇᴀ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 500
+    sell-price: 0.5
+  flowering_azalea:
+    material: FLOWERING_AZALEA
+    name: "&6&lғʟᴏᴡᴇʀɪɴɢ ᴀᴢᴀʟᴇᴀ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+      - "&6ᴄʟɪᴄᴋ ᴅʀᴏɪᴛ &7→ &cVendre"
+    buy-price: 500
+    sell-price: 0.5

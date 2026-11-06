@@ -1,0 +1,19 @@
+name: SellWands
+version: 1.0.0
+main: fr.ivalona.sellwands.SellWandsPlugin
+api-version: '1.21'
+description: Batons de vente liés aux prix du /shop (Commun, Rare, Epic, Mythique)
+depend: [Vault]
+softdepend: [Nexo]
+commands:
+  sellwand:
+    description: Gestion des batons de vente
+    aliases: [swand, baton]
+    usage: /<command> give <joueur> <rarete> [quantite] | list | reload
+permissions:
+  sellwand.use:
+    description: Utiliser un baton de vente
+    default: true
+  sellwand.admin:
+    description: Donner / recharger les batons de vente
+    default: op

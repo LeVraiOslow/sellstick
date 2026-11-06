@@ -1,0 +1,223 @@
+# ============================================================
+#  Items de la catégorie "Redstone"
+#  Tous les fichiers .yml de ce dossier (hors category.yml) sont lus : vous pouvez
+#  découper les items en plusieurs fichiers (ex : items.yml, rares.yml...).
+#
+#  Placement : par défaut les items se placent automatiquement dans les "content-slots"
+#  de category.yml et passent sur la page suivante quand il n'y a plus de place.
+#  Pour forcer un emplacement : slot: 10 (ou slots: [10, 11]) et, optionnel, page: 2.
+#
+#  Champs d'un item :
+#    material          : item réel acheté/vendu (STONE ou nexo:mon_item)
+#    display-material  : (optionnel) autre item pour l'affichage
+#    name / lore       : (optionnels) nom et description (codes couleur partout)
+#                        lore par défaut = default-item-lore de config.yml
+#    buy-price         : prix d'achat  (absent ou négatif = non achetable)
+#    sell-price        : prix de vente (absent ou négatif = non vendable)
+#    buyable / sellable: false pour forcer la désactivation
+#    commands          : commandes exécutées à l'achat (console par défaut, "[player] ..." possible)
+#                        placeholders : %player% %amount%
+#    give-item         : donner l'item physique ? (défaut : false si "commands" est défini)
+#    commands-per-unit : true = exécuter les commandes une fois par unité achetée
+#    custom-model-data, glow, hide-flags, amount
+#  Clic gauche = acheter, clic droit = vendre.
+# ============================================================
+shop-items:
+  repeater:
+    material: REPEATER
+    name: "&6&lʀᴇᴘᴇᴀᴛᴇʀ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+    buy-price: 160
+  comparator:
+    material: COMPARATOR
+    name: "&6&lᴄᴏᴍᴘᴀʀᴀᴛᴏʀ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+    buy-price: 200
+  dropper:
+    material: DROPPER
+    name: "&6&lᴅʀᴏᴘᴘᴇʀ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+    buy-price: 125
+  dispenser:
+    material: DISPENSER
+    name: "&6&lᴅɪsᴘᴇɴsᴇʀ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+    buy-price: 250
+  hopper:
+    material: HOPPER
+    name: "&6&lʜᴏᴘᴘᴇʀ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+    buy-price: 10000
+  target:
+    material: TARGET
+    name: "&6&lᴛᴀʀɢᴇᴛ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+    buy-price: 200
+  redstone_lamp:
+    material: REDSTONE_LAMP
+    name: "&6&lʀᴇᴅsᴛᴏɴᴇ ʟᴀᴍᴘ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+    buy-price: 300
+  honey_block:
+    material: HONEY_BLOCK
+    name: "&6&lʜᴏɴᴇʏ ʙʟᴏᴄᴋ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+    buy-price: 7500
+  slime_block:
+    material: SLIME_BLOCK
+    name: "&6&lsʟɪᴍᴇ ʙʟᴏᴄᴋ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+    buy-price: 7500
+  lightning_rod:
+    material: LIGHTNING_ROD
+    name: "&6&lʟɪɢʜᴛɴɪɴɢ ʀᴏᴅ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+    buy-price: 600
+  armor_stand:
+    material: ARMOR_STAND
+    name: "&6&lᴀʀᴍᴏʀ sᴛᴀɴᴅ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+    buy-price: 5000
+  sculk_sensor:
+    material: SCULK_SENSOR
+    name: "&6&lsᴄᴜʟᴋ sᴇɴsᴏʀ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+    buy-price: 7500
+  observer:
+    material: OBSERVER
+    name: "&6&lᴏʙsᴇʀᴠᴇʀ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+    buy-price: 10000
+  piston:
+    material: PISTON
+    name: "&6&lᴘɪsᴛᴏɴ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+    buy-price: 10000
+  sticky_piston:
+    material: STICKY_PISTON
+    name: "&6&lsᴛɪᴄᴋʏ ᴘɪsᴛᴏɴ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+    buy-price: 10000
+  lava_bucket:
+    material: LAVA_BUCKET
+    name: "&6&lʟᴀᴠᴀ ʙᴜᴄᴋᴇᴛ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+    buy-price: 500
+  water_bucket:
+    material: WATER_BUCKET
+    name: "&6&lᴡᴀᴛᴇʀ ʙᴜᴄᴋᴇᴛ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+    buy-price: 500
+  bucket:
+    material: BUCKET
+    name: "&6&lʙᴜᴄᴋᴇᴛ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+    buy-price: 200

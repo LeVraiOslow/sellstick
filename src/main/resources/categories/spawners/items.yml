@@ -1,0 +1,436 @@
+# ============================================================
+#  Items de la catégorie "Spawners"
+#  Tous les fichiers .yml de ce dossier (hors category.yml) sont lus : vous pouvez
+#  découper les items en plusieurs fichiers (ex : items.yml, rares.yml...).
+#
+#  Placement : par défaut les items se placent automatiquement dans les "content-slots"
+#  de category.yml et passent sur la page suivante quand il n'y a plus de place.
+#  Pour forcer un emplacement : slot: 10 (ou slots: [10, 11]) et, optionnel, page: 2.
+#
+#  Champs d'un item :
+#    material          : item réel acheté/vendu (STONE ou nexo:mon_item)
+#    display-material  : (optionnel) autre item pour l'affichage
+#    name / lore       : (optionnels) nom et description (codes couleur partout)
+#                        lore par défaut = default-item-lore de config.yml
+#    buy-price         : prix d'achat  (absent ou négatif = non achetable)
+#    sell-price        : prix de vente (absent ou négatif = non vendable)
+#    buyable / sellable: false pour forcer la désactivation
+#    commands          : commandes exécutées à l'achat (console par défaut, "[player] ..." possible)
+#                        placeholders : %player% %amount%
+#    give-item         : donner l'item physique ? (défaut : false si "commands" est défini)
+#    commands-per-unit : true = exécuter les commandes une fois par unité achetée
+#    custom-model-data, glow, hide-flags, amount
+#  Clic gauche = acheter, clic droit = vendre.
+# ============================================================
+# Spawners : donnés par commande (RoseStacker), aucun item physique n'est vendu/repris.
+# Syntaxe RoseStacker : /rs give spawner <joueur> <type> [taille du stack] [quantité]
+# => on exécute la commande une fois par spawner acheté (commands-per-unit) avec 1 en paramètre.
+# Les emplacements sont forcés avec "slot:".
+# ============================================================
+shop-items:
+  spawner_chicken:
+    slot: 10
+    material: SPAWNER
+    name: "&6&lsᴘᴀᴡɴᴇʀ ᴀ ᴘᴏᴜʟᴇs"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+    buy-price: 50000
+    commands:
+      - "rs give spawner %player% chicken 1"
+    commands-per-unit: true
+  spawner_rabbit:
+    slot: 11
+    material: SPAWNER
+    name: "&6&lsᴘᴀᴡɴᴇʀ ᴀ ʟᴀᴘɪɴs"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+    buy-price: 60000
+    commands:
+      - "rs give spawner %player% rabbit 1"
+    commands-per-unit: true
+  spawner_pig:
+    slot: 12
+    material: SPAWNER
+    name: "&6&lsᴘᴀᴡɴᴇʀ ᴀ ᴄᴏᴄʜᴏɴs"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+    buy-price: 75000
+    commands:
+      - "rs give spawner %player% pig 1"
+    commands-per-unit: true
+  spawner_sheep:
+    slot: 13
+    material: SPAWNER
+    name: "&6&lsᴘᴀᴡɴᴇʀ ᴀ ᴍᴏᴜᴛᴏɴs"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+    buy-price: 75000
+    commands:
+      - "rs give spawner %player% sheep 1"
+    commands-per-unit: true
+  spawner_cow:
+    slot: 14
+    material: SPAWNER
+    name: "&6&lsᴘᴀᴡɴᴇʀ ᴀ ᴠᴀᴄʜᴇs"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+    buy-price: 75000
+    commands:
+      - "rs give spawner %player% cow 1"
+    commands-per-unit: true
+  spawner_mooshroom:
+    slot: 15
+    material: SPAWNER
+    name: "&6&lsᴘᴀᴡɴᴇʀ ᴀ ᴠᴀᴄʜᴇs ᴄʜᴀᴍᴘɪɢɴᴏɴs"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+    buy-price: 100000
+    commands:
+      - "rs give spawner %player% mooshroom 1"
+    commands-per-unit: true
+  spawner_cod:
+    slot: 16
+    material: SPAWNER
+    name: "&6&lsᴘᴀᴡɴᴇʀ ᴀ ᴍᴏʀᴜᴇs"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+    buy-price: 125000
+    commands:
+      - "rs give spawner %player% cod 1"
+    commands-per-unit: true
+  spawner_salmon:
+    slot: 19
+    material: SPAWNER
+    name: "&6&lsᴘᴀᴡɴᴇʀ ᴀ sᴀᴜᴍᴏɴs"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+    buy-price: 125000
+    commands:
+      - "rs give spawner %player% salmon 1"
+    commands-per-unit: true
+  spawner_horse:
+    slot: 20
+    material: SPAWNER
+    name: "&6&lsᴘᴀᴡɴᴇʀ ᴀ ᴄʜᴇᴠᴀᴜx"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+    buy-price: 125000
+    commands:
+      - "rs give spawner %player% horse 1"
+    commands-per-unit: true
+  spawner_squid:
+    slot: 21
+    material: SPAWNER
+    name: "&6&lsᴘᴀᴡɴᴇʀ ᴀ ᴘᴏᴜʟᴘᴇs"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+    buy-price: 150000
+    commands:
+      - "rs give spawner %player% squid 1"
+    commands-per-unit: true
+  spawner_goat:
+    slot: 22
+    material: SPAWNER
+    name: "&6&lsᴘᴀᴡɴᴇʀ ᴀ ᴄʜᴇᴠʀᴇs"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+    buy-price: 150000
+    commands:
+      - "rs give spawner %player% goat 1"
+    commands-per-unit: true
+  spawner_bee:
+    slot: 23
+    material: SPAWNER
+    name: "&6&lsᴘᴀᴡɴᴇʀ ᴀ ᴀʙᴇɪʟʟᴇs"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+    buy-price: 175000
+    commands:
+      - "rs give spawner %player% bee 1"
+    commands-per-unit: true
+  spawner_polar_bear:
+    slot: 24
+    material: SPAWNER
+    name: "&6&lsᴘᴀᴡɴᴇʀ ᴀ ᴏᴜʀs ᴘᴏʟᴀɪʀᴇs"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+    buy-price: 175000
+    commands:
+      - "rs give spawner %player% polar_bear 1"
+    commands-per-unit: true
+  spawner_glow_squid:
+    slot: 25
+    material: SPAWNER
+    name: "&6&lsᴘᴀᴡɴᴇʀ ᴀ ᴘᴏᴜʟᴘᴇs ʟᴜɪsᴀɴᴛs"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+    buy-price: 200000
+    commands:
+      - "rs give spawner %player% glow_squid 1"
+    commands-per-unit: true
+  spawner_zombie:
+    material: SPAWNER
+    name: "&6&lsᴘᴀᴡɴᴇʀ ᴀ ᴢᴏᴍʙɪᴇs"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+    buy-price: 250000
+    commands:
+      - "rs give spawner %player% zombie 1"
+    commands-per-unit: true
+  spawner_spider:
+    material: SPAWNER
+    name: "&6&lsᴘᴀᴡɴᴇʀ ᴀ ᴀʀᴀɪɢɴᴇᴇs"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+    buy-price: 250000
+    commands:
+      - "rs give spawner %player% spider 1"
+    commands-per-unit: true
+  spawner_creeper:
+    material: SPAWNER
+    name: "&6&lsᴘᴀᴡɴᴇʀ ᴀ ᴄʀᴇᴇᴘᴇʀ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+    buy-price: 250000
+    commands:
+      - "rs give spawner %player% creeper 1"
+    commands-per-unit: true
+  spawner_skeleton:
+    material: SPAWNER
+    name: "&6&lsᴘᴀᴡɴᴇʀ ᴀ sqᴜᴇʟᴇᴛᴛᴇs"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+    buy-price: 250000
+    commands:
+      - "rs give spawner %player% skeleton 1"
+    commands-per-unit: true
+  spawner_witch:
+    material: SPAWNER
+    name: "&6&lsᴘᴀᴡɴᴇʀ ᴀ sᴏʀᴄɪᴇʀᴇs"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+    buy-price: 275000
+    commands:
+      - "rs give spawner %player% witch 1"
+    commands-per-unit: true
+  spawner_slime:
+    material: SPAWNER
+    name: "&6&lsᴘᴀᴡɴᴇʀ ᴀ sʟɪᴍᴇs"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+    buy-price: 300000
+    commands:
+      - "rs give spawner %player% slime 1"
+    commands-per-unit: true
+  spawner_magma_cube:
+    material: SPAWNER
+    name: "&6&lsᴘᴀᴡɴᴇʀ ᴀ ᴄᴜʙᴇs ᴅᴇ ᴍᴀɢᴍᴀ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+    buy-price: 300000
+    commands:
+      - "rs give spawner %player% magma_cube 1"
+    commands-per-unit: true
+  spawner_breeze:
+    material: SPAWNER
+    name: "&6&lsᴘᴀᴡɴᴇʀ ᴀ ʙʀᴇᴇᴢᴇs"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+    buy-price: 400000
+    commands:
+      - "rs give spawner %player% breeze 1"
+    commands-per-unit: true
+  spawner_zombified_piglin:
+    material: SPAWNER
+    name: "&6&lsᴘᴀᴡɴᴇʀ ᴀ ᴘɪɢʟɪɴs ᴢᴏᴍʙɪғɪᴇs"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+    buy-price: 500000
+    commands:
+      - "rs give spawner %player% zombified_piglin 1"
+    commands-per-unit: true
+  spawner_blaze:
+    material: SPAWNER
+    name: "&6&lsᴘᴀᴡɴᴇʀ ᴀ ʙʟᴀᴢᴇs"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+    buy-price: 500000
+    commands:
+      - "rs give spawner %player% blaze 1"
+    commands-per-unit: true
+  spawner_wither_skeleton:
+    material: SPAWNER
+    name: "&6&lsᴘᴀᴡɴᴇʀ ᴀ ᴡɪᴛʜᴇʀs sqᴜᴇʟᴇᴛᴛᴇs"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+    buy-price: 750000
+    commands:
+      - "rs give spawner %player% wither_skeleton 1"
+    commands-per-unit: true
+  spawner_enderman:
+    material: SPAWNER
+    name: "&6&lsᴘᴀᴡɴᴇʀ ᴀ ᴇɴᴅᴇʀᴍᴀɴs"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+    buy-price: 1000000
+    commands:
+      - "rs give spawner %player% enderman 1"
+    commands-per-unit: true
+  spawner_guardian:
+    material: SPAWNER
+    name: "&6&lsᴘᴀᴡɴᴇʀ ᴀ ɢᴜᴀʀᴅɪᴀɴs"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+    buy-price: 1000000
+    commands:
+      - "rs give spawner %player% guardian 1"
+    commands-per-unit: true
+  spawner_iron_golem:
+    material: SPAWNER
+    name: "&6&lsᴘᴀᴡɴᴇʀ ᴀ ɢᴏʟᴇᴍs ᴅᴇ ғᴇʀ"
+    lore:
+      - "&8ᴘʀɪx"
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+      - ""
+      - "&6ᴄʟɪᴄᴋ ɢᴀᴜᴄʜᴇ &7→ &aAcheter"
+    buy-price: 1500000
+    commands:
+      - "rs give spawner %player% iron_golem 1"
+    commands-per-unit: true
